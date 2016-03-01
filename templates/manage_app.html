@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app.manage">
+<head>
+    <title>NDC manage app</title>
+    <script type="text/javascript">
+
+        var SHARE_SETTING_JSON_STRING = '{{ SHARE_SETTING_JSON_STRING | safe}}';
+
+    </script>
+
+    <link rel="stylesheet" href="{{STATIC_URL}}bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="{{STATIC_URL}}bower_components/bootstrap/dist/css/bootstrap-theme.css">   
+    <link rel="stylesheet" href="{{STATIC_URL}}bower_components/angular-block-ui/dist/angular-block-ui.css">
+    <!-- inject_custom:css -->
+
+    <script src="{{STATIC_URL}}bower_components/jquery/dist/jquery.js"></script>
+    <script src="{{STATIC_URL}}bower_components/angular/angular.js"></script>
+    <script src="{{STATIC_URL}}bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="{{STATIC_URL}}bower_components/angular-block-ui/dist/angular-block-ui.js"></script>
+    <!-- inject_custom:js -->
+    
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- inject:js -->
+    <!-- endinject -->     
+</head>
+<body ng-controller="app.manage.controller">
+
+    {% verbatim %}
+        <div ng-include=" 'app.manage.template.html' "></div>  
+    {% endverbatim %}    
+</body>
+</html>
