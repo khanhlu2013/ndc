@@ -9,5 +9,5 @@ templates/dist/develop
 node_modules
 static/node_modules
 static/typings
-static/app/*.js
-static/app/*.js.map
+static/src/*/*.js
+static/src/*/*.js.map

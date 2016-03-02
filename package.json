@@ -1,0 +1,5 @@
+{
+    "scripts" : {
+        "dev" : "osascript dev.scpt"
+    }
+}
