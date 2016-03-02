@@ -14,9 +14,10 @@ urlpatterns = patterns('',
     # url(r'^$', 'ndc.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$',view.anonymous_app_view.as_view(),name=settings.LOGIN_URL),   
+
     url(r'^django_admin/', include(admin.site.urls)),
-    url(r'^manage/$',login_required(view.manage_app_view.as_view()),name=settings.NDC_APP_URL),  
+    url(r'^$',login_required(view.manage_app_view.as_view()),name=settings.MANAGE_APP_URL),  
+    url(r'^account/login/', 'django.contrib.auth.views.login',name=settings.LOGIN_URL),    
     url(r'^account/logout/$','django.contrib.auth.views.logout_then_login',name=settings.LOGOUT_URL),    
     url(r'^auth/', include(account.urls)),   
     url(r'^ndc_user/', include(ndc_user.urls)),   

@@ -91,7 +91,8 @@ TEMPLATE_DIRS = ( PROJECT_ROOT.child('templates'), )
 ROOT_URLCONF = 'ndc.urls'
 LOGIN_URL = 'login_named_url'
 LOGOUT_URL = 'logout_named_url'
-NDC_APP_URL = 'manage_app_named_url'
+MANAGE_APP_URL = 'manage_app_named_url'
+LOGIN_REDIRECT_URL = MANAGE_APP_URL
 OAUTH_GOOGLE_ID = os.environ.get('OAUTH_GOOGLE_ID')
 OAUTH_GOOGLE_SECRETE = os.environ.get('OAUTH_GOOGLE_SECRETE')
 

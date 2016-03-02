@@ -16,7 +16,6 @@ def set(context,login_user):
     share_setting['PAYMENT_TYPE_LST'] = [ {'internal':data[0],'external':data[1]} for data in Attendance.PAYMENT_TYPE_LST]
     share_setting['PHONE_REGX'] = settings.PHONE_REGX
     share_setting['WHY'] = settings.WHY
-    share_setting['NDC_APP_URL'] = reverse(settings.NDC_APP_URL)
     
     if login_user.is_anonymous():
         share_setting['LOGIN_USER'] = None
