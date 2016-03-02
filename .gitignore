@@ -1,0 +1,10 @@
+*.pyc
+.DS_Store
+templates/.DS_Store
+venv
+venv_
+task.txt
+.env
+Procfile
+templates/dist/develop
+node_modules
