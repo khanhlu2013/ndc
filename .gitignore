@@ -2,9 +2,12 @@
 .DS_Store
 templates/.DS_Store
 venv
-venv_
 task.txt
 .env
 Procfile
 templates/dist/develop
 node_modules
+static/node_modules
+static/typings
+static/app/*.js
+static/app/*.js.map
