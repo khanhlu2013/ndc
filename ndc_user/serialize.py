@@ -25,8 +25,8 @@ class Group_serializer(serializers.ModelSerializer):
 
 class Ndc_user_serializer(serializers.ModelSerializer):
 
-    membership_lst = Membership_serializer(many=True)
-    groups = Group_serializer(many=True)
+    # membership_lst = Membership_serializer(many=True)
+    # groups = Group_serializer(many=True)
 
     class Meta:
         model = Ndc_user
@@ -42,6 +42,7 @@ class Ndc_user_serializer(serializers.ModelSerializer):
             'gender',
             'is_active',
             'is_exempt',
-            'membership_lst',
-            'groups'
+            'is_member_old'
+            # 'membership_lst',
+            # 'groups'
         )
