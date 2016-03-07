@@ -12,7 +12,7 @@ class Attendance(models.Model):
     )
 
     date_time = models.DateTimeField(auto_now_add=True)
-    event = models.ForeignKey('event.Event')
+    event = models.ForeignKey('event.Event',related_name='attendance_lst')
     user = models.ForeignKey(Ndc_user,blank=True,null=True)
     anonymous_first_name = models.CharField(max_length=100,blank=True,null=True)
     anonymous_last_name = models.CharField(max_length=100,blank=True,null=True)

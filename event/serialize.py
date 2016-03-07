@@ -44,7 +44,7 @@ class Default_rate_serializer(serializers.ModelSerializer):
 
 class Event_serializer(serializers.ModelSerializer):
     venue = Venue_serializer(many=False)
-    attendance_set = Attendance_serializer(many=True)
+    attendance_lst = Attendance_serializer(many=True)
     event_rate_lst = Event_rate_serializer(many=True)
 
     class Meta:
@@ -55,7 +55,7 @@ class Event_serializer(serializers.ModelSerializer):
             'start_time',
             'duration',
             'venue',
-            'attendance_set',
+            'attendance_lst',
             'event_rate_lst'
         )
 
