@@ -26,13 +26,13 @@
     <script>
       System.config({
         packages: {        
-          'static/src': {
+          'static/dist/src': {
             format: 'register',
             defaultExtension: 'js'
           }
         }
       });
-      System.import('static/src/app/main')
+      System.import('static/dist/src/app/main')
             .then(null, console.error.bind(console));
     </script>
 
