@@ -25,13 +25,13 @@ import { User } from './user.model';
 	`
 })
 export class UserListComponent implements OnInit{
-	constructor(private _user_dao_service:UserDaoService){ }
+	constructor(private user_dao_service:UserDaoService){ }
 	
 	private user_lst:User[];
 	private error_message: string;
 
 	private get_user_lst() {
-		this._user_dao_service.get_user_lst()
+		this.user_dao_service.get_user_lst()
 			.subscribe(
 				user_lst => this.user_lst = user_lst,
 				error => this.error_message = <any>error

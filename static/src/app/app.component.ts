@@ -4,6 +4,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 import { EventListComponent } from '../event/event-list.component';
 import { UserListComponent } from '../user/user-list.component';
 import { UserDaoService } from '../user/user.dao';
+import { EventDaoService } from '../event/event.dao';
 import { HTTP_PROVIDERS }    from 'angular2/http';
 
 @Component({
@@ -20,7 +21,7 @@ import { HTTP_PROVIDERS }    from 'angular2/http';
 	providers: [
 		ROUTER_PROVIDERS, HTTP_PROVIDERS, 
 		AppSettingComponent, 
-		UserDaoService
+		UserDaoService, EventDaoService
 	]
 })
 @RouteConfig([
