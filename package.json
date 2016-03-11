@@ -1,5 +1,15 @@
 {
-    "scripts" : {
-        "dev" : "osascript dev.scpt"
-    }
+  "scripts": {
+    "dev": "osascript dev.scpt",
+    "test": "./node_modules/.bin/karma start ./test/karma.conf.js --single-run --browsers PhantomJS"
+  },
+  "devDependencies": {
+    "karma": "^0.13.22",
+    "jasmine-core": "^2.4.1",
+    "karma-jasmine": "^0.3.7",
+    "karma-chrome-launcher": "^0.2.2",
+    "phantomjs-prebuilt": "^2.1.5",
+    "karma-phantomjs-launcher": "^1.0.0"
+  }
 }
+
