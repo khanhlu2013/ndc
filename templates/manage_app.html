@@ -1,48 +1,34 @@
 <html>
   <head>
     <base href="/">
-    <title>Angular 2 QuickStart</title>
+    <title>ndc app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <script type="text/javascript">
-
         var SHARE_SETTING_JSON_STRING = '{{ SHARE_SETTING_JSON_STRING | safe}}';
-
     </script>
 
     <!-- 1. Load libraries -->
     <!-- IE required polyfills, in this exact order -->
-    <script src="{{STATIC_URL}}node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="{{STATIC_URL}}node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="{{STATIC_URL}}es6-shim/es6-shim.min.js"></script>
+    <script src="{{STATIC_URL}}systemjs/dist/system-polyfills.js"></script>
 
-    <script src="{{STATIC_URL}}node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="{{STATIC_URL}}node_modules/systemjs/dist/system.src.js"></script>
-    <script src="{{STATIC_URL}}node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="{{STATIC_URL}}node_modules/angular2/bundles/angular2.dev.js"></script>
-    <script src="{{STATIC_URL}}node_modules/angular2/bundles/router.dev.js"></script>
-    <script src="{{STATIC_URL}}node_modules/angular2/bundles/http.dev.js"></script>
-
-
-    <!-- 2. Configure SystemJS -->
-    <script>
-      System.config({
-        packages: {        
-          'static/dist/src': {
-            format: 'register',
-            defaultExtension: 'js'
-          }
-        }
-      });
-      System.import('static/dist/src/app/main')
-            .then(null, console.error.bind(console));
-    </script>
-
+    <script src="{{STATIC_URL}}angular2/bundles/angular2-polyfills.js"></script>
+    <script src="{{STATIC_URL}}systemjs/dist/system.src.js"></script>
+    <script src="{{STATIC_URL}}rxjs/bundles/Rx.js"></script>
+    <script src="{{STATIC_URL}}angular2/bundles/angular2.dev.js"></script>
+    <script src="{{STATIC_URL}}angular2/bundles/router.dev.js"></script>
+    <script src="{{STATIC_URL}}angular2/bundles/http.dev.js"></script>
+    {% load static from staticfiles %}
+    <script src="{% static 'ndc_bundle.js' %}"></script>
   </head>
 
   <!-- 3. Display the application -->
   <body>
     <a href="{% url 'logout_named_url' %}">Logout</a>  
     <my-app>Loading...</my-app>
-
+    <script>
+      System.import('app/main').then(null, console.error.bind(console));
+    </script>
   </body>
 
 </html>

@@ -101,9 +101,14 @@ import dj_database_url
 DATABASES = {'default': dj_database_url.config()}
 
 #- STATICFILES_DIRS and STATICFILES_FINDERS are ONLY need for LOCAL development because Django will host these static file on its local server for us. In deployment, we will host this static file our self using amazon s3, and access it though the static_url setting
-STATICFILES_DIRS = ( PROJECT_ROOT.child('static'), )
+# STATICFILES_DIRS = ( PROJECT_ROOT.child('static'), )
+STATICFILES_DIRS = ( 
+    PROJECT_ROOT.child('static').child('build').child('develop'), 
+    PROJECT_ROOT.child('static').child('node_modules'), 
+)
 STATICFILES_FINDERS = ( 'django.contrib.staticfiles.finders.FileSystemFinder', )
-STATIC_ROOT = ''
+STATIC_ROOT = PROJECT_ROOT.child('static_root')
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 """
     membership type is hardcoded because there is only 4 type: platinum, gold, silver,brone. On the server side i only need
     to reserve an integer id to represent the type. on the client side, an integer id to represent type is not user friendly

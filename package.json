@@ -1,15 +1,16 @@
 {
   "scripts": {
-    "dev": "osascript dev.scpt",
-    "test": "./node_modules/.bin/karma start ./test/karma.conf.js --single-run --browsers PhantomJS"
+    "start": "osascript dev.scpt",
+        "_start_django_server": "source ./venv/bin/activate;foreman start --procfile ./Procfile_local --env ./.env",
+        "_compile_ts_n_watch_2_refresh_browser" : "gulp --gulpfile ./static/gulpfile_develop.js build_develop_nWatch2RefreshBrowser",    
+        "_test_develop_n_watch" : "./node_modules/.bin/karma start ./test/karma.conf.js --browsers PhantomJS",
+    "postinstall" : "cd ./static;npm install"
   },
   "devDependencies": {
     "karma": "^0.13.22",
     "jasmine-core": "^2.4.1",
     "karma-jasmine": "^0.3.7",
-    "karma-chrome-launcher": "^0.2.2",
     "phantomjs-prebuilt": "^2.1.5",
     "karma-phantomjs-launcher": "^1.0.0"
   }
 }
-

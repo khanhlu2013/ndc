@@ -5,8 +5,8 @@ venv
 task.txt
 .env
 Procfile
-templates/dist/develop
 node_modules
+npm-debug.log
 static/node_modules
 static/typings
-static/dist
+static/build

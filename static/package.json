@@ -12,15 +12,15 @@
     "zone.js": "0.5.15"
   },
   "devDependencies": {
-    "typescript": "^1.8",
     "typings": "^0.6.8",
     "gulp": "^3.9.1",
     "gulp-typescript": "^2.12.1",
     "browser-sync": "^2.11.1",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "run-sequence": "^1.1.5"
   },
   "scripts": {
-    "tsc:w": "tsc -w",
-    "typings": "typings"
+    "typings": "typings",
+    "postinstall": "typings install"
   }
 }
