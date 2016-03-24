@@ -1,3 +1,4 @@
+//this file is run on travis ci server
 var gulp = require('gulp');
 var shell = require('gulp-shell')
 var ts = require('gulp-typescript');

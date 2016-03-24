@@ -17,7 +17,8 @@
     "gulp-typescript": "^2.12.1",
     "browser-sync": "^2.11.1",
     "gulp-sourcemaps": "^1.6.0",
-    "run-sequence": "^1.1.5"
+    "run-sequence": "^1.1.5",
+    "gulp-shell": "^0.5.2"
   },
   "scripts": {
     "typings": "typings",

@@ -2,15 +2,16 @@ language: node_js
 node_js:
   - "node"
 
-before_script:
+install:
+  - npm run install_deploy
   - npm install -g gulp
-  - npm install -g gulp-shell
-  - npm install -g gulp-typescript  
-  - npm install -g gulp-uglify
+  - npm install gulp-shell
+  - npm install gulp-typescript  
+  - npm install gulp-uglify
   - npm install -g typings
 
 script:
-  - gulp --gulpfile ./static/gulp_deploy.travis_ci.js
+  - gulp --gulpfile ./static/gulp_deploy.js
   - ./node_modules/.bin/karma start ./test/karma.conf.js --single-run --browsers PhantomJS
 
 
