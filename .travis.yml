@@ -3,16 +3,11 @@ node_js:
   - "node"
 
 install:
-  - npm run install_deploy
+  - npm install
   - npm install -g gulp-cli
-  - npm install gulp
-  - npm install gulp-typescript  
   - npm install gulp-shell
   - npm install gulp-uglify
-
 
 script:
   - gulp --gulpfile ./static/gulp_deploy.js
   - ./node_modules/.bin/karma start ./test/karma.conf.js --single-run --browsers PhantomJS
-
-

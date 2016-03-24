@@ -5,8 +5,7 @@
         "_compile_ts_n_watch_2_refresh_browser" : "gulp --gulpfile ./static/gulpfile_develop.js build_develop_nWatch2RefreshBrowser",    
         "_test_develop_n_watch" : "./node_modules/.bin/karma start ./test/karma.conf.js --browsers PhantomJS",
     
-    "install_develop" : "npm install;cd ./static;npm install",
-    "install_deploy" : "npm install; cd ./static;npm install --production"
+    "postinstall":"cd ./static;npm install"        
   },
   "devDependencies": {
     "karma": "^0.13.22",
