@@ -4,12 +4,12 @@ node_js:
 
 install:
   - npm run install_deploy
-  - npm install gulp
   - npm install -g gulp-cli
-  - npm install gulp-shell
+  - npm install gulp
   - npm install gulp-typescript  
+  - npm install gulp-shell
   - npm install gulp-uglify
-  - npm install -g typings
+
 
 script:
   - gulp --gulpfile ./static/gulp_deploy.js

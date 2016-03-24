@@ -6,7 +6,7 @@
         "_test_develop_n_watch" : "./node_modules/.bin/karma start ./test/karma.conf.js --browsers PhantomJS",
     
     "install_develop" : "npm install;cd ./static;npm install",
-    "install_deploy" : "npm install"
+    "install_deploy" : "npm install; cd ./static;npm install --production"
   },
   "devDependencies": {
     "karma": "^0.13.22",
