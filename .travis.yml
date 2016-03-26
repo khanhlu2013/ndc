@@ -6,8 +6,6 @@ install:
   - pip install -r requirements.txt
   - npm install
   - npm install -g gulp-cli
-  - npm install gulp-shell
-  - npm install gulp-uglify
 
 script:
   - gulp --gulpfile ./gulp_deploy.js
