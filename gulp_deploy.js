@@ -16,7 +16,7 @@ gulp.task('compile_ts',function(){
 		.pipe(gulp.dest('./static/build'));	
 });
 
-gulp.task('collect_static', shell.task([
+gulp.task('collect_static', shell.task([	
   'honcho run python manage.py collectstatic --noinput -i .bin -i angular2 -i es6-promise -i es6-shim -i reflect-metadata -i rxjs -i systemjs -i typings -i zone.js'
 ]));
 
