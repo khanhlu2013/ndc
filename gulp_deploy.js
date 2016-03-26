@@ -20,9 +20,10 @@ gulp.task('collect_static', shell.task([
   'honcho run python manage.py collectstatic --noinput -i .bin -i angular2 -i es6-promise -i es6-shim -i reflect-metadata -i rxjs -i systemjs -i typings -i zone.js'
 ]));
 
-gulp.task('default',function(){
-	return run_sequence([
+gulp.task('default',function(cb){
+	run_sequence(
 		'compile_ts',
-		'collect_static'
-	]);
+		'collect_static',
+		cb
+	);
 });
