@@ -10,3 +10,4 @@ npm-debug.log
 static/node_modules
 static/typings
 static/build
+static_root
