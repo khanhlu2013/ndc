@@ -10,3 +10,15 @@ install:
 script:
   - gulp --gulpfile ./gulp_deploy.js
   - ./node_modules/.bin/karma start ./test/karma.conf.js --single-run --browsers PhantomJS
+
+env:
+  - DEBUG=1
+  - TEMPLATE_DEBUG=1
+  - SECRET_KEY=1&4l!w(n3@s6v^@j!31+zvuhq1fmc*b=v^_@+y3qn5&doyh448
+  - STATIC_URL=/static/
+  - DISABLE_COLLECTSTATIC=1
+  - PYTHONUNBUFFERED=1
+  - DATABASE_URL=postgres://postgres:123@localhost:5432/ndc
+  - IS_USE_CDN=0
+  - OAUTH_GOOGLE_ID=235021980824-0mvgmalapleoo221eejv17eff5hc2sdp.apps.googleusercontent.com
+  - OAUTH_GOOGLE_SECRETE=OrWJhO5m2uGGZn2fEH3dNv1a  
