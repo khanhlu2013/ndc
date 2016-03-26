@@ -103,7 +103,7 @@ DATABASES = {'default': dj_database_url.config()}
 #- STATICFILES_DIRS and STATICFILES_FINDERS are ONLY need for LOCAL development because Django will host these static file on its local server for us. In deployment, we will host this static file our self using amazon s3, and access it though the static_url setting
 # STATICFILES_DIRS = ( PROJECT_ROOT.child('static'), )
 STATICFILES_DIRS = ( 
-    PROJECT_ROOT.child('static').child('build').child('develop'), 
+    PROJECT_ROOT.child('static').child('build'), 
     PROJECT_ROOT.child('static').child('node_modules'), 
 )
 STATICFILES_FINDERS = ( 'django.contrib.staticfiles.finders.FileSystemFinder', )

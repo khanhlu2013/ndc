@@ -1,13 +1,14 @@
-language: node_js
-node_js:
-  - "node"
+language: python
+python:
+  - "2.7"
 
 install:
+  - pip install -r requirements.txt
   - npm install
   - npm install -g gulp-cli
   - npm install gulp-shell
   - npm install gulp-uglify
 
 script:
-  - gulp --gulpfile ./static/gulp_deploy.js
+  - gulp --gulpfile ./gulp_deploy.js
   - ./node_modules/.bin/karma start ./test/karma.conf.js --single-run --browsers PhantomJS
