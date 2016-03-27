@@ -1,24 +1,24 @@
 {
   "scripts": {
     "start": "osascript dev.scpt",
-        "_start_django_server": "source ./venv/bin/activate;honcho start --procfile ./Procfile_local --env ./.env",
-        "_compile_ts_n_watch_2_refresh_browser" : "gulp --gulpfile ./gulp_develop.js build_develop_nWatch2RefreshBrowser",    
-        "_test_develop_n_watch" : "./node_modules/.bin/karma start ./test/karma.conf.js --browsers PhantomJS",
-    
-    "postinstall":"cd ./static;npm install"        
+    "_start_django_server": "source ./venv/bin/activate;honcho start --procfile ./Procfile_local --env ./.env",
+    "_compile_ts_n_watch_2_refresh_browser": "gulp --gulpfile ./gulp_develop.js build_develop_nWatch2RefreshBrowser",
+    "_test_develop_n_watch": "./node_modules/.bin/karma start ./test/karma.conf.js --browsers PhantomJS",
+    "postinstall": "cd ./static;npm install"
   },
   "devDependencies": {
     "karma": "^0.13.22",
     "jasmine-core": "^2.4.1",
     "karma-jasmine": "^0.3.7",
-    "phantomjs-prebuilt":"^2.1.6",
+    "phantomjs-prebuilt": "^2.1.6",
     "karma-phantomjs-launcher": "^1.0.0",
     "gulp": "^3.9.1",
-    "gulp-typescript": "^2.12.1",    
+    "gulp-typescript": "^2.12.1",
     "browser-sync": "^2.11.1",
     "gulp-sourcemaps": "^1.6.0",
     "run-sequence": "^1.1.5",
     "gulp-shell": "^0.5.2",
-    "gulp-uglify": "^1.5.3"    
+    "gulp-uglify": "^1.5.3",
+    "firebase-tools": "^2.2.1"
   }
 }
