@@ -10,3 +10,6 @@ install:
 script:
   - gulp --gulpfile ./gulp_deploy.js
   - ./node_modules/.bin/karma start ./test/karma.conf.js --single-run --browsers PhantomJS
+
+after_success:
+  - firebase deploy --email khanhlu2013@gmail.com --password _Mother3169_  
