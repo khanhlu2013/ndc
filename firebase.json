@@ -1,9 +1,7 @@
 {
-  "firebase": "ndc-static",
+  "firebase": "ndc-ng2-static",
   "public": "static_root",
   "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
+
   ]
 }

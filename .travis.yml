@@ -12,4 +12,4 @@ script:
   - ./node_modules/.bin/karma start ./test/karma.conf.js --single-run --browsers PhantomJS
 
 after_success:
-  - firebase deploy --token "-K9P0NbsYgOZcGPZV2RS|7e1bb58558128ca86f15c24f33136b7a"
+  - firebase deploy --token ${FIREBASE_TOKEN}
