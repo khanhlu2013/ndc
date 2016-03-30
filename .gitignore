@@ -11,3 +11,4 @@ static/node_modules
 static/typings
 static/build
 static_root
+static/collected_js_lib

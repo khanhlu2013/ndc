@@ -16,6 +16,6 @@
   },
   "scripts": {
     "typings": "typings",
-    "postinstall": "typings install"
+    "postinstall": "typings install;gulp --gulpfile gulp_collect_js_lib.js"
   }
 }

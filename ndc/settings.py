@@ -83,7 +83,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 #----------------------------------------------------------------------------------------------------------------------------
 
 DEBUG = os.environ.get('DEBUG') == '1'
-TEMPLATE_DEBUG = os.environ.get('TEMPLATE_DEBUG') == '1'
+TEMPLATE_DEBUG = DEBUG
 IS_USE_CDN = os.environ.get('IS_USE_CDN') == '1' #we only use Content Deliver Network CDN when deploy. for local developmet we are not.
 SECRET_KEY = os.environ.get('SECRET_KEY')
 STATIC_URL = os.environ.get('STATIC_URL')
@@ -104,7 +104,7 @@ DATABASES = {'default': dj_database_url.config()}
 # STATICFILES_DIRS = ( PROJECT_ROOT.child('static'), )
 STATICFILES_DIRS = ( 
     PROJECT_ROOT.child('static').child('build'), 
-    PROJECT_ROOT.child('static').child('node_modules'), 
+    PROJECT_ROOT.child('static').child('collected_js_lib'), 
 )
 STATICFILES_FINDERS = ( 'django.contrib.staticfiles.finders.FileSystemFinder', )
 STATIC_ROOT = PROJECT_ROOT.child('static_root')
