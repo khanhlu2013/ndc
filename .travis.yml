@@ -11,6 +11,9 @@ script:
   - gulp --gulpfile ./gulp_deploy.js
   - ./node_modules/.bin/karma start ./test/karma.conf.js --single-run --browsers PhantomJS
 
+before_deploy:
+  - gulp --gulpfile ./gulp_deploy.js post_deploy_clean_up
+
 deploy:
   provider: heroku
   api_key:
