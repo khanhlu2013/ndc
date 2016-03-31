@@ -18,7 +18,8 @@ gulp.task('compile_ts',function(){
 
 gulp.task('collect_static', shell.task([	
   'python manage.py collectstatic --noinput'
-  //make sure we set DISABLE_COLLECTSTATIC = true @ heroku. if we don't, it is not a fatal problem. heroku will smart enough to detect unmodification.
+  //make sure we set DISABLE_COLLECTSTATIC = 1 @ heroku. if we don't, it is not a fatal problem. heroku will smart enough to detect this task is already done over travis(unmodified file).
+  //i could have done this task over heroku but i like to put all deploy logic in one place, which is here in travis
 ]));
 
 gulp.task('post_deploy_clean_up',shell.task([
