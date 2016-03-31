@@ -1,7 +1,6 @@
-tell application "Terminal" to do script "source ./lu/ndc-ng2/venv/bin/activate;foreman start --procfile ./lu/ndc-ng2/Procfile_local --env ./lu/ndc-ng2/.env"
-
-tell application "Terminal" to do script "cd ./lu/ndc-ng2;gulp --gulpfile ./static/gulpfile.js serve"
-
+tell application "Terminal" to do script "cd ~/lu/ndc-ng2; npm run _start_django_server"
+tell application "Terminal" to do script "cd ~/lu/ndc-ng2; npm run _compile_ts_n_watch_2_refresh_browser"
+tell application "Terminal" to do script "cd ~/lu/ndc-ng2; npm run _test_develop_n_watch"
 
 
 tell application "Terminal"

@@ -10,7 +10,6 @@ export class EventDaoService {
 	get_event_lst() {
 		return this.http.get(this.event_lst_url)
 			.map(res => {
-				console.log(res);
 				return <Event[]>res.json().map(Event.build)
 			})
 			.catch(this.handleError);
