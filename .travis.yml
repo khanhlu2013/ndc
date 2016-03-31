@@ -21,6 +21,6 @@ deploy:
   skip_cleanup: true    
   app: ndc-ng2
   run:
-    - "python manage migrate"
+    - "python manage.py migrate"
   on:
     repo: khanhlu2013/ndc-ng2

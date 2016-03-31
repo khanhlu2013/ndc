@@ -87,7 +87,6 @@ DEBUG = os.environ.get('DEBUG') == '1'
 TEMPLATE_DEBUG = DEBUG
 IS_USE_CDN = os.environ.get('IS_USE_CDN') == '1' #we only use Content Deliver Network CDN when deploy. for local developmet we are not.
 SECRET_KEY = os.environ.get('SECRET_KEY')
-STATIC_URL = os.environ.get('STATIC_URL')
 TEMPLATE_DIRS = ( PROJECT_ROOT.child('templates'), )
 ROOT_URLCONF = 'ndc.urls'
 LOGIN_URL = 'login_named_url'
@@ -101,8 +100,10 @@ OAUTH_GOOGLE_SECRETE = os.environ.get('OAUTH_GOOGLE_SECRETE')
 import dj_database_url
 DATABASES = {'default': dj_database_url.config()}
 
-#- STATICFILES_DIRS and STATICFILES_FINDERS are ONLY need for LOCAL development because Django will host these static file on its local server for us. In deployment, we will host this static file our self using amazon s3, and access it though the static_url setting
-# STATICFILES_DIRS = ( PROJECT_ROOT.child('static'), )
+
+STATIC_HOST = os.environ.get('DJANGO_STATIC_HOST', '')
+STATIC_URL = STATIC_HOST + os.environ.get('STATIC_URL')
+
 STATICFILES_DIRS = ( 
     PROJECT_ROOT.child('static').child('build'), 
     PROJECT_ROOT.child('static').child('collected_js_lib'), 
