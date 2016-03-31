@@ -7,29 +7,18 @@
         var SHARE_SETTING_JSON_STRING = '{{ SHARE_SETTING_JSON_STRING | safe}}';
     </script>
 
+
+    {% load static from staticfiles %}
     <!-- 1. Load libraries -->
-    <!-- IE required polyfills, in this exact order -->
-    <!-- {% if DEBUG %} -->
-      {% load static from staticfiles %}
-      <script src="{% static 'es6-shim.min.js' %}"></script>
-      <script src="{% static 'system-polyfills.js' %}"></script>
-      <script src="{% static 'angular2-polyfills.js' %}"></script>
-      <script src="{% static 'system.src.js' %}"></script>
-      <script src="{% static 'Rx.js' %}"></script>
-      <script src="{% static 'angular2.dev.js' %}"></script>
-      <script src="{% static 'router.dev.js' %}"></script>
-      <script src="{% static 'http.dev.js' %}"></script>
-    <!-- {% else %} -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script> -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script> -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.7/angular2-polyfills.js"></script> -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system.src.js"></script> -->
-      <!-- <script src="https://npmcdn.com/@reactivex/rxjs@5.0.0-beta.2/dist/global/Rx.js"></script> -->
-      <!-- <script src="https://code.angularjs.org/2.0.0-beta.7/angular2.dev.js"></script> -->
-      <!-- <script src="https://code.angularjs.org/2.0.0-beta.7/router.dev.js"></script> -->
-      <!-- <script src="https://code.angularjs.org/2.0.0-beta.7/http.dev.js"></script> -->
-    <!-- {% endif %} -->
-    
+    <!-- IE required polyfills, in this exact order -->    
+    <script src="{% static 'es6-shim.min.js' %}"></script>
+    <script src="{% static 'system-polyfills.js' %}"></script>
+    <script src="{% static 'angular2-polyfills.js' %}"></script>
+    <script src="{% static 'system.src.js' %}"></script>
+    <script src="{% static 'Rx.js' %}"></script>
+    <script src="{% static 'angular2.dev.js' %}"></script>
+    <script src="{% static 'router.dev.js' %}"></script>
+    <script src="{% static 'http.dev.js' %}"></script>
 
     <script src="{% static 'ndc_bundle.js' %}"></script>
   </head>
